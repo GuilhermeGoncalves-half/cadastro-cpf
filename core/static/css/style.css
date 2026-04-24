@@ -8,7 +8,7 @@
 /* Fundo */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #070708, #070404);
+    background: linear-gradient(135deg, #cdcdce, #b9f8c8);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -24,6 +24,12 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     text-align: center;
+    font-family: Verdana;
+}
+
+/* Logado como */
+.card p{
+    margin-top: 20px;
 }
 
 /* Título */
@@ -50,21 +56,21 @@ body {
 /* Botão */
 .btn {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 @keyframes botao{
     from{
-        padding : 10px;
+        padding : 15px;
         opacity: 1;
     }
     to{
-        padding: 14px;
+        padding: 18px;
         background-color: rgb(255, 255, 255);
         opacity: 0.2;
         color: #070404;
