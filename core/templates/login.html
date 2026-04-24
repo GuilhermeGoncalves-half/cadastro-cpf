@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="card">
+    <h2>Login</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="input-group">
+            <input type="text" name="cpf" placeholder="CPF">
+        </div>
+
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Senha">
+        </div>
+
+        <button class="btn btn-login">Entrar</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if success %}
+        <p class="success">{{ success }}</p>
+    {% endif %}
+
+    <a href="/register/" class="link">Criar conta</a>
+</div>
+
+</body>
+</html>

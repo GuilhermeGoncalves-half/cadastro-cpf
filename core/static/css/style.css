@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #070708, #070404);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card central */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 15px;
+    width: 390px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Título */
+.card h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #ececec;
+    color: white;
+}
+
+/* Botão */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes botao{
+    from{
+        padding : 10px;
+        opacity: 1;
+    }
+    to{
+        padding: 14px;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.2;
+        color: #070404;
+    }
+}
+
+.btn:hover{
+    animation: both 0.5s botao;
+}
+
+/* Login = verde */
+.btn-login {
+    background: #22c55e;
+    color: white;
+}
+
+/* Register = azul */
+.btn-register {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Mensagens */
+.error {
+    color: #ef4444;
+    margin-top: 10px;
+}
+
+.success {
+    color: #22c55e;
+    margin-top: 10px;
+}
+
+/* Link */
+.link {
+    margin-top: 15px;
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: white;
+}
