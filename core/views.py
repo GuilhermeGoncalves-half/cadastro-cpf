@@ -20,6 +20,10 @@ def register(request):
 
         if not CPF().validate(cpf_clean):
             return render(request, "register.html", {"error": "CPF inválido"})
+        
+        if User.objects.filter(username=username).exists():
+            return render(request, "register.html", {"error": "Nome de usuário já cadastrado"})
+
 
         if User.objects.filter(cpf=cpf_clean).exists():
             return render(request, "register.html", {"error": "CPF já cadastrado"})
@@ -31,6 +35,7 @@ def register(request):
         )
 
         return render(request, "register.html", {"success": "Usuário criado!"})
+    
 
     return render(request, "register.html")
 
@@ -57,5 +62,7 @@ def home(request):
 
 
 def logout_view(request):
-    logout(request)
+    if request.method == "POST":
+        logout(request)
     return redirect("/login/")
+
